@@ -84,7 +84,7 @@ async def b_about(message,args):
 	await message.channel.send(
 	f"```txt\n"+
 	f"Version:   0.0\n"+
-	f"Prefixes:  ~!=#$%&-.>?\n"+
+	f"Prefixes:  ~+!=$%&-:.?\\\n"+
 	f"user:      {client.user}\n"+
 	f"channel:   {message.channel.id}\n"+
 	f"guild:     {message.guild.id}\n"+

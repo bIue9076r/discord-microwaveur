@@ -2,7 +2,7 @@
 
 **Version**:   1.0
 
-**Prefixes**:  `~!=#$%&-.>?`
+**Prefixes**:  `~~+!=$%&-:.?\\`
 
 # Commands:
 
