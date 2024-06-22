@@ -70,8 +70,9 @@ async def b_help(message,args):
 	"echok:   ~echok   ...\n"+
 	"about:   ~about\n"+
     "ttt:     ~ttt\n"+
-    "tttx:    ~tttx\n"+
-    "ttto:    ~ttto\n"+
+    "tttx:    ~tttx [x] [y]\n"+
+    "ttto:    ~ttto [x] [y]\n"+
+    "tshow:   ~tshow\n"+
 	"```"
 	)
 
@@ -101,7 +102,7 @@ async def b_echo_k(message,args):
 async def b_about(message,args):
 	await message.channel.send(
 	f"```txt\n"+
-	f"Version:   1.0.1\n"+
+	f"Version:   1.0.1.1\n"+
 	f"Prefixes:  ~+!=$%&-:.?\\\n"+
 	f"user:      {client.user}\n"+
 	f"channel:   {message.channel.id}\n"+
@@ -260,6 +261,14 @@ async def b_ttto(message, args):
             return
     return 
 
+async def b_tshow(message,args):
+    await message.channel.send(
+        ntoe[str(board["board"][0][0])]+ntoe[str(board["board"][0][1])]+ntoe[str(board["board"][0][2])]+"\n"+
+        ntoe[str(board["board"][1][0])]+ntoe[str(board["board"][1][1])]+ntoe[str(board["board"][1][2])]+"\n"+
+        ntoe[str(board["board"][2][0])]+ntoe[str(board["board"][2][1])]+ntoe[str(board["board"][2][2])]
+    )
+    return
+
 cmds = {
 	"help":		b_help,
 	"echo":		b_echo,
@@ -268,11 +277,13 @@ cmds = {
     "ttt":      b_ttt,
     "tttx":     b_tttx,
     "ttto":     b_ttto,
+    "tshow":    b_tshow,
 	"h":		b_help,
     "e":        b_echo,
     "t":        b_ttt,
     "tx":       b_tttx,
     "to":       b_ttto,
+    "ts":       b_tshow,
 }
 
 async def pmes(message):
